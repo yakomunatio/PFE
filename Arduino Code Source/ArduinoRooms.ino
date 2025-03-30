@@ -3,8 +3,8 @@
    // Red LED for incorrect access
 
 #define FAN_PIN 3      
-#define LIGHT_PIN 5    
-#define WINDOW_PIN 6   
+#define LIGHT_PIN 4    
+#define WINDOW_PIN 5   
 #define CURTAIN_PIN 9  
 
 
