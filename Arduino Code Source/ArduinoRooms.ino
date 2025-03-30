@@ -5,7 +5,7 @@
 #define FAN_PIN 3      
 #define LIGHT_PIN 4    
 #define WINDOW_PIN 5   
-#define CURTAIN_PIN 9  
+#define CURTAIN_PIN 6  
 
 
 void setup() {
