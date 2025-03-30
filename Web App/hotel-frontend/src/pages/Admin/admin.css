@@ -1,0 +1,385 @@
+body {
+    background-color: var(--primary);
+    height: 100vh;
+    width: 100%;
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    width: 80%;
+    margin-top: 4%;
+
+}
+
+.header .title {
+    & h1 {
+        color: var(--title);
+    }
+
+    & p {
+        color: var(--text);
+    }
+}
+
+.customer-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    justify-self: center;
+    margin-top: 40px;
+}
+
+h3 {
+
+    color: var(--title);
+    font-size: 24px;
+
+}
+
+.grup-buttons {
+    display: flex;
+    width: 45%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grup-buttons button {
+    border: 2px solid var(--border);
+    border-radius: 2px;
+    width: 125px;
+    height: 40px;
+    background-color: var(--white);
+    color: var(--text);
+    text-align: center;
+    font-weight: 500;
+    opacity: 0.75;
+}
+
+.grup-buttons .active {
+    opacity: 1;
+    border: 2px solid var(--royal-blue);
+    color: #374B63;
+}
+
+.grup-buttons .add,
+.add {
+    border: 0;
+    width: 44px;
+    height: 44px;
+    background-color: var(--royal-blue);
+
+    color: var(--white);
+    font-size: 20px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.tabel {
+    width: 80%;
+    max-height: 465px;
+    justify-self: center;
+    margin-top: 20px;
+    border: 1.5px solid var(--border);
+    border-radius: 2px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    /* Alternative shadow options: */
+    /* box-shadow: 0 2px 8px rgba(102, 120, 255, 0.1); */ /* Blue-tinted shadow */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); */ /* Larger, softer shadow */
+}
+
+
+.tabel .discription {
+    border: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background-color: var(--primary);
+
+}
+
+.tabel .discription ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+}
+
+.tabel .discription ul li {
+    width: 100%;
+    text-align: center;
+    color: var(--text);
+    font-weight: 400;
+}
+
+
+.tabel article .room {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    background-color: var(--white);
+    border-top: 1px solid var(--border);
+    transition: all 0.2s ease;
+    
+}
+
+.tabel article .room:hover {
+    background-color: #e5e9f8a2;
+}
+
+.tabel article .room li {
+    width: 100%;
+    text-align: center;
+    color: var(--text);
+    font-weight: 500;
+    
+}
+
+.remove {
+    color: var(--text);
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.remove:hover {
+    color: var(--crimson);
+    font-size: 24px;
+}
+
+.tabel article .room .val {
+    font-weight: normal;
+}
+
+/*Modal style ===========**/
+
+.fixed {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    background-color: #8094ad8e;
+}
+
+
+.fixed .modal {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+
+    background-color: var(--white);
+    border-radius: 2px;
+}
+
+.fixed .modal h2 {
+    padding: 5%;
+    color: var(--title);
+}
+
+.fixed .modal .parametrs {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 35px 42px;
+    padding: 0 5%;
+}
+
+
+.fixed .modal .parametrs input,
+input {
+    outline: none;
+    width: 100%;
+    height: 38px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    color: var(--sub-title);
+    font-size: 16px;
+    cursor: pointer;
+    padding-left: 10px;
+
+}
+
+.fixed .modal .parametrs input:focus,
+select:focus {
+
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+
+}
+
+.fixed .modal .customer-parametrs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 5%;
+}
+
+.fixed .modal .parametrs select {
+
+
+    width: 100%;
+    height: 38px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    font-size: 16px;
+    cursor: pointer;
+    padding-left: 10px;
+    color: var(--sub-title);
+    outline: none;
+
+}
+
+
+
+.fixed .modal .Add {
+    background-color: var(--royal-blue);
+    padding: 10px;
+    border-radius: 2px;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.fixed .modal .cancel {
+    padding: 10px;
+    color: var(--royal-blue);
+    font-weight: 500;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+  .header, .customer-list, .tabel {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .grup-buttons {
+    width: 100%;
+  }
+
+  .fixed .modal {
+    width: 80%;
+  }
+
+  .fixed .modal .parametrs {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grup-buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .grup-buttons button {
+    width: calc(50% - 5px);
+    margin: 0;
+  }
+
+  .grup-buttons .add {
+    width: 44px;
+  }
+
+  .tabel {
+    width: 95%;
+    overflow-x: auto;
+  }
+
+  .tabel .discription ul,
+  .tabel article .room {
+    min-width: 700px;
+  }
+
+  .tabel .discription ul li,
+  .tabel article .room li {
+    font-size: 14px;
+  }
+
+  .customer-list {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header .title h1 {
+    font-size: 24px;
+  }
+
+  .header .title p {
+    font-size: 14px;
+  }
+
+  .grup-buttons button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .grup-buttons .add {
+    width: 44px;
+    margin: 0 auto;
+  }
+
+  .fixed .modal {
+    width: 95%;
+  }
+
+  .fixed .modal h2 {
+    font-size: 20px;
+  }
+
+  .customer-list h3 {
+    font-size: 20px;
+  }
+
+  .tabel .discription ul,
+  .tabel article .room {
+    min-width: 500px;
+  }
+
+  .tabel .discription ul li,
+  .tabel article .room li {
+    font-size: 12px;
+  }
+}
+
+/* Add smooth scrolling for better mobile experience */
+.tabel {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+
+/* Optional: Add loading state styles */
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: var(--text);
+}
+
+/* Optional: Add transition for smoother interactions */
+.tabel article .room {
+  transition: background-color 0.3s ease;
+}
+
+/* Optional: Improve modal responsiveness */
+.fixed .modal {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+

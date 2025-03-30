@@ -1,0 +1,89 @@
+.customer-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.room-title {
+  color: var(--title);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.sensor-container {
+  background: var(--white);
+  border-radius: 2px;       
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.sensor-title {
+  color: var(--royal-blue);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.sensor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.sensor-item {
+  background: var(--primary);
+  padding: 1rem;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sensor-value {
+  color: var(--royal-blue);
+  font-weight: 500;
+}
+
+.controls-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.control-button {
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 2px;
+  text-align: center;
+  border: 2px solid var(--border);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.control-button:hover {
+  background: var(--royal-blue);
+  color: var(--white);
+  border-color: var(--royal-blue);
+}
+
+.control-button.active {
+  background: var(--royal-blue);
+  color: var(--white);
+  border-color: var(--royal-blue);
+}
+
+@media (max-width: 768px) {
+  .customer-container {
+    padding: 1rem;
+  }
+  
+  .sensor-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .controls-container {
+    grid-template-columns: 1fr;
+  }
+}
